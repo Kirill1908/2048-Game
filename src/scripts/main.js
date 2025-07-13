@@ -7,7 +7,6 @@ const COLUMNS = 4;
 const ROWS = 4;
 const game = new Game();
 
-// слухаємо події
 document.addEventListener('keydown', (e) => {
   if (game.getStatus() === 'playing') {
     switch (e.key) {
@@ -28,7 +27,6 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-// міняємо інтерфейс
 function updateInterface() {
   let i = 0;
   const state = game.getState();
@@ -60,7 +58,6 @@ function updateInterface() {
   }
 }
 
-// міняємо кнопку
 buttonStart.addEventListener('click', () => {
   if (buttonStart.className === 'button restart') {
     game.restart();
